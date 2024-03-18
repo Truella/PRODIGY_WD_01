@@ -1,0 +1,236 @@
+@font-face {
+    font-family: "custom font";
+    src: url(font/Merriweather/Merriweather-Light.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: "custom font";
+    src: url(font/Merriweather/Merriweather-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: "custom font";
+    src: url(font/Merriweather/Merriweather-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+*{
+    box-sizing: border-box;
+    font-family: "custom font";
+}
+body{
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+    background-color: #E4E9E1;
+}
+header{
+    padding: 0;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #E4E9E1;
+    box-shadow: 1px 1px 10px #445A22;
+}
+nav{
+    margin: 0;
+    padding: 0;
+}
+.hide-nav{
+    display: none;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+nav ul li{
+    position: relative;
+    padding: 15px 10px;
+}
+a{
+    text-decoration: none;
+    color: #445A22;
+    font-weight: bold;
+}
+.qualities p{
+    border-bottom: 1px solid #445A22;
+}
+.logo{
+    height: 10vh;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo h2{
+    font-style: italic;
+    color: #445A22;
+}
+.sub-menu{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #E4E9E1;
+}
+.hidden{
+    display: none;
+}
+.hero-image{
+    height: 95vh;
+}
+.hero-image{
+    background-image: url("images/photo-1512100356356-de1b84283e18.jpeg");
+    background-size: cover;
+    margin-top: -20px;
+    position: relative;
+    z-index: -100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cta{
+    width: 60vw;
+    height: 60vw;
+    background-color: #D3EFEB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer ul{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 12px;
+}
+.cta-btns{
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.cta-btns > a{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #445A22;
+    font-size: 14px;
+}
+.cta-btns > :first-child{
+    background-color: #445A22;
+    color: #E4E9E1;
+    font-weight: bold;
+}
+.qualities{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-content h1{
+    font-size: 32px;
+    font-style: italic;
+    color: #445A22;
+}
+.main-content{
+    padding: 15px;
+}
+
+nav ul li:hover {
+    background-color: #445A22;
+    border-radius: 10px;
+}
+nav ul li:hover a{
+    color: #E4E9E1;
+}
+@media (min-width:768px) and (max-width:991px) {
+    .main-content h1{
+        font-size: 48px;
+        text-align: center;
+    }
+    .main-content .first{
+        font-size: 16px;
+        margin-top: -25px;
+        text-align: center;
+    }
+    .qualities{
+        width: 50%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    .cta-btns{
+        width: 60%;
+        margin: 40px auto;
+        justify-content: space-between;
+    }
+
+}
+@media (min-width:992px){
+    .main-content h1{
+        font-size: 48px;
+    }
+    .main-content p{
+        font-size: 16px;
+    }
+    .cta-btns{
+        width: 60%;
+        justify-content: space-between;
+    }
+    .qualities{
+        width: 60%;
+        margin: 0;
+        justify-content: space-between;
+    }
+    .open-nav{
+        display: none;
+    }
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hide-nav{
+        width: 60%;
+        display: flex;
+        justify-content: right;
+    }
+    nav ul{
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+    }
+    li{
+        border: none;
+    }
+    .sub-menu{
+        width: 10vw;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border: none;
+
+    }
+    .event-dropdown:hover .sub-menu{
+        display: flex;
+        flex-direction: column;
+    }
+    main{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .hero-image{
+        width: 45vw;
+    }
+    .main-content{
+        width: 55vw;
+        padding: 5%;
+    }
+    .cta{
+        width: 20vw;
+        height: 30vh;
+        position: absolute;
+        right: 35vw;
+        top: 45vh;
+    }
+}
